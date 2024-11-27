@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GoTour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            font-family: Arial, sans-serif;
+            background-color: grey;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: black;
+            text-align: center;
+        }
+        button {
+            font-size: x-large;
+            background-color: #4CAF50;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            padding: 10px 30px;
+            border-radius: 50px;
+            border: none;
+            margin: 20px auto;
+            display: block;
+            position: relative;
+        }
+        button:hover {
+            background-color: #3e8e41;
+            transform: scale(1.2);
+        }
+        button:active {
+            transform: scale(1);
+        }
+        p {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        .highlight img {
+            display: block;
+            margin: 20px auto;
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+        header {
+            background-color: green;
+            color: black;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 20px;
+        }
+        .tooltip {
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            font-size: 12px;
+            color: #fff;
+            background-color: #333;
+            border-radius: 3px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            white-space: nowrap;
+        }
+        button:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO THE ULTIMATE WORLD TOUR</h1>
+        <p>Explore our amazing tours below!</p>
+    </header>
+    
+    <div class="highlight">
+        <img 
+            src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F9e11e3c3c515203b1b7c5259d7b047a9.cdn.bubble.io%2Ff1707723259698x474547740534221600%2FDune%2520bashing.jpeg?w=&h=&auto=compress&dpr=1.25&fit=max" 
+            alt="Dune Bashing Adventure">
+    </div>
+
+    <div class="button-container">
+        <button onclick="window.open('https://instagram.com/gofortourguide', '_blank')">
+            YOUR GUIDE
+            <span class="tooltip">https://instagram.com/gofortourguide</span>
+        </button>
+    </div>
+    
+    <img src="tourguide.png" width="200" height="200" alt="Tour Guide Icon">
+    <p>If you want to know more about the tour, <span style="color: green;">click the button above</span>.</p>
+</body>
+</html>
